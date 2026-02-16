@@ -215,7 +215,7 @@ function saveWeight() {
     value: weight,
   });
 
-  userData.points += 10; // ganha pontos por registrar
+  userData.points += 10;
   save();
   renderWeightHistory();
   updateUI();
