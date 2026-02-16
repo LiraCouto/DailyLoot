@@ -10,9 +10,7 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <!-- LOGIN -->
     <div id="login-screen" class="login-container">
       <div class="card login-card">
         <h1>DAILY<span>LOOT</span></h1>
@@ -22,7 +20,6 @@
       </div>
     </div>
 
-    <!-- APP -->
     <div id="app-container" style="display: none">
       <header class="menu">
         <div class="menu-content">
@@ -42,7 +39,7 @@
         </div>
 
         <section class="progress-section card">
-          <h2>Progresso do Mês</h2>
+          <h2>Progresso do Dia</h2>
           <div class="progress-bar-container">
             <div class="progress-bar" id="main-progress"></div>
           </div>
@@ -52,19 +49,23 @@
           <section class="category-card">
             <h3>🍎 Físico</h3>
             <div id="desc-physical" class="challenge-text"></div>
-            <button onclick="completeChallenge('physical')">Concluir</button>
+            <button onclick="completeChallenge('physical')" id="btn-physical">
+              Concluir
+            </button>
           </section>
-
           <section class="category-card">
             <h3>🙏 Espiritual</h3>
             <div id="desc-spiritual" class="challenge-text"></div>
-            <button onclick="completeChallenge('spiritual')">Concluir</button>
+            <button onclick="completeChallenge('spiritual')" id="btn-spiritual">
+              Concluir
+            </button>
           </section>
-
           <section class="category-card">
             <h3>🧠 Emocional</h3>
             <div id="desc-emotional" class="challenge-text"></div>
-            <button onclick="completeChallenge('emotional')">Concluir</button>
+            <button onclick="completeChallenge('mental')" id="btn-mental">
+              Concluir
+            </button>
           </section>
         </div>
 
@@ -84,12 +85,9 @@
           </div>
           <div id="weight-history"></div>
         </section>
-
         <section id="admin-panel"></section>
       </main>
     </div>
-
     <script src="assets/js/script.js"></script>
   </body>
 </html>
-
