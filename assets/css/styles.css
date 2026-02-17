@@ -14,6 +14,7 @@ body {
   background: var(--gray);
   color: var(--primary);
 }
+
 .login-container {
   height: 100vh;
   display: flex;
@@ -33,7 +34,6 @@ body {
   max-width: 400px;
 }
 
-/* INPUTS ATRAENTES */
 input[type="text"],
 input[type="number"] {
   width: 100%;
@@ -88,12 +88,15 @@ input:focus {
   padding: 2rem;
   border-radius: 2rem;
   border-top: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
 }
 .challenge-text {
   white-space: pre-line;
   margin-bottom: 1.5rem;
-  min-height: 120px;
-  font-size: 0.95rem;
+  min-height: 150px;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 button {
@@ -117,6 +120,10 @@ button:disabled {
   transform: none;
 }
 
+.surprise-btn {
+  background: #333;
+  margin: 2rem 0;
+}
 .progress-bar-container {
   background: #ddd;
   height: 15px;
@@ -129,6 +136,13 @@ button:disabled {
   width: 0%;
   background: var(--accent);
   transition: width 0.5s ease;
+}
+
+.logout-btn {
+  background: #cc0000;
+  width: auto;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
