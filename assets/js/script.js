@@ -7,6 +7,7 @@ const allowedUsers = [
   "Isa",
   "Thai",
   "Gueth",
+  "User",
 ];
 const ADMIN_NAME = "Mateus Lira";
 let userData = null;
@@ -362,5 +363,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Enter") handleLogin();
     });
 });
+
 
 
