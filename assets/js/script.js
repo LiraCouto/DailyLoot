@@ -10,7 +10,6 @@ const allowedUsers = [
 const ADMIN_NAME = "Mateus Lira";
 let userData = null;
 
-// ================= BANCO DE DADOS EXPANDIDO (15 POR CATEGORIA) =================
 const exercisesData = {
   bracos: [
     "Tríceps no Banco (Cadeira)",
@@ -155,7 +154,6 @@ const surpriseList = [
   "Diga uma afirmação positiva em voz alta",
 ];
 
-// ================= LOGIN =================
 function handleLogin() {
   const name = document.getElementById("username").value.trim();
   if (!allowedUsers.includes(name)) return alert("Usuário não autorizado");
@@ -185,7 +183,6 @@ function handleLogin() {
   if (name === ADMIN_NAME) renderAdmin();
 }
 
-// ================= LOGICA DIÁRIA =================
 function resetDaily() {
   const today = new Date().toDateString();
   if (
@@ -209,7 +206,6 @@ function generateDailyContent() {
   const getRand = (arr, num) =>
     [...arr].sort(() => 0.5 - Math.random()).slice(0, num);
 
-  // REGRA: 1 Braço, 2 Peito, 1 Costas, 1 Abdômen, 3 Pernas
   const pList = [
     ...getRand(exercisesData.bracos, 1),
     ...getRand(exercisesData.peito, 2),
@@ -248,7 +244,6 @@ function displaySavedContent() {
   }
 }
 
-// ================= BOTÕES E PROGRESSO =================
 function completeChallenge(type) {
   if (userData.completedToday[type]) return;
 
@@ -296,7 +291,6 @@ function updateUI() {
   }
 }
 
-// ================= AUXILIARES =================
 function generateCardio(days) {
   if (days < 7) return "20 min Caminhada";
   if (days < 14) return "30 min Caminhada rápida";
@@ -367,3 +361,4 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Enter") handleLogin();
     });
 });
+
